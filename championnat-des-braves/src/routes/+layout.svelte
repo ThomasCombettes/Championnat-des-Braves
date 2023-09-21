@@ -108,7 +108,7 @@
               </svg>
             </svelte:fragment>
             <SidebarDropdownItem
-              href="/jeux/jeux-a-boire"
+              href="/jeux/jeux-a-boire/mon-glaive-mon-foie"
               label="glave et foix"
             />
           </SidebarDropdownWrapper>
