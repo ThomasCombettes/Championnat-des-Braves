@@ -9,8 +9,10 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<strong class="text-xl uppercase">Championnat des Braves</strong>
 			</svelte:fragment>
+
+			
 			<svelte:fragment slot="trail">
 				<a
 					class="btn btn-sm variant-ghost-surface"
@@ -18,19 +20,11 @@
 					target="_blank"
 					rel="noreferrer"
 				>
-					Discord
+					Discord M2
 				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://twitter.com/SkeletonUI"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Twitter
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
+					href="https://github.com/ThomasCombettes/Championnat-des-Braves"
 					target="_blank"
 					rel="noreferrer"
 				>
@@ -39,6 +33,39 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
-	<!-- Page Route Content -->
+
+	<svelte:fragment slot="sidebarLeft">
+		<div id="tab">
+
+			<nav class="list-nav">
+				<!-- (optionally you can provide a label here) -->
+				<ul>
+					<li>
+						<a href="/elements/lists">
+							<span class="badge bg-primary-500">💀</span>
+							<span class="flex-auto">guerre d'homme</span>
+						</a>
+					</li>
+					<li>
+						<a href="/elements/lists">
+							<span class="badge bg-primary-500">~</span>
+							<span class="flex-auto">à venir</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</svelte:fragment>
+	
 	<slot />
 </AppShell>
+
+
+
+<style>
+	#tab{
+		border-color: red;
+		border-width: 5px;
+		padding: 40;
+	}
+</style>
