@@ -251,10 +251,8 @@
         les scores les plus bas et y=y+1.<br />
       </p>
 
-      Publiée le : 28/02/2023 à 21:09:05 Ajoutée le : 28/02/2023 à 21:09:04 Mise
-      à jour le : 28/02/2023 à 21:09:05
     {:else if tabSet === 2}
-      (tab panel 3 contents)
+      En cours de developpement
     {/if}
   </svelte:fragment>
 </TabGroup>
