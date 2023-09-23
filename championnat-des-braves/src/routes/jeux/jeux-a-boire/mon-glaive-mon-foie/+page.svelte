@@ -1,9 +1,15 @@
 <script>
-  let roles = "ecuyer";
+  let roles = "hero";
   import { TabGroup, Tab, TabAnchor } from "@skeletonlabs/skeleton";
   import { Footer } from "flowbite-svelte";
 
   import ecu from "$lib/ecuyer.png";
+
+  import dieu from "$lib/dieu.png";
+
+  import mage from "$lib/mage.png";
+
+  import hero from "$lib/hero.png";
   let tabSet = 0;
 
   let getDice = () => Math.floor(Math.random() * 6) + 1;
@@ -48,7 +54,7 @@
           </section>
         </div>
 
-        {#if (roles = "ecuyer")}
+        {#if (roles === "ecuyer")}
           <div class="card">
             <header class="card-header">
               <div class="headercard">
@@ -67,6 +73,26 @@
               </p>
             </section>
             <footer class="card-footer"><h1 class="h1">③① Ecuyer</h1></footer>
+          </div>
+
+        {:else if (roles === "hero")}
+          <div class="card">
+            <header class="card-header">
+              <div class="headercard">
+                <img src={hero} alt="hero" />
+              </div>
+            </header>
+
+            <section class="p-4">
+              <p class="p">
+                Quand le pouvoir du Dieu est déclenché (sur un total de 7 points
+                sur un jet), une fois qu’il a distribué ses coups, le Héro est
+                obligé de s’interposer. <br />
+                Il lance alors un dé pour protéger les personnes visées.
+                <br />
+              </p>
+            </section>
+            <footer class="card-footer"><h1 class="h1">①① / ②② / ③③ Héro</h1></footer>
           </div>
         {/if}
       </div>
@@ -250,7 +276,6 @@
         Egalités : En cas d’égalitée au score le plus bas, un duel s’effectue entre
         les scores les plus bas et y=y+1.<br />
       </p>
-
     {:else if tabSet === 2}
       En cours de developpement
     {/if}
